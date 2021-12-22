@@ -1,6 +1,11 @@
 import React from "react";
 import MenuItem from "../menu-item/menu-item.js";
 import "../directory/directory.styles.scss";
+import puzzlesImg from "../directory/puzzle.jpeg";
+import printsImg from "../directory/prints.jpg";
+import thermosImg from "../directory/thermos.jpeg";
+import minibookImg from "../directory/minibook.jpg";
+import photocardsImg from "../directory/cards.jpg";
 
 class Directory extends React.Component {
   constructor() {
@@ -10,35 +15,38 @@ class Directory extends React.Component {
       sections: [
         {
           title: "puzzles",
-          // imageUrl: "../directory/puzzle.jpeg",
+          imageUrl: puzzlesImg,
           id: 1,
-          linkUrl: "shop/hats",
+
+          linkUrl: "shop/puzzles",
         },
         {
-          title: "jackets",
-          // imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
+          title: "photo prints",
+          imageUrl: printsImg,
+
           id: 2,
-          linkUrl: "shop/jackets",
+          linkUrl: "shop/photo prints",
         },
         {
-          title: "sneakers",
-          // imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
+          title: "thermos",
+          imageUrl: thermosImg,
+
           id: 3,
-          linkUrl: "shop/sneakers",
+          linkUrl: "shop/thermos",
         },
         {
-          title: "womens",
-          // imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
+          title: "mini book",
+          imageUrl: minibookImg,
           size: "large",
           id: 4,
-          linkUrl: "shop/womens",
+          linkUrl: "shop/mini book",
         },
         {
-          title: "mens",
-          // imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
+          title: "photo cards",
+          imageUrl: photocardsImg,
           size: "large",
-          id: 5,
-          linkUrl: "shop/mens",
+          id: 4,
+          linkUrl: "shop/photo cards",
         },
       ],
     };
