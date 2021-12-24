@@ -1,5 +1,5 @@
 import React from "react";
-import "./menu-item.styles.scss";
+import "../styles/menu-item.styles.scss";
 import { Link } from "react-router-dom";
 
 const MenuItem = ({ title, imageUrl, size }) => (
@@ -13,7 +13,7 @@ const MenuItem = ({ title, imageUrl, size }) => (
         <h1 className="title">{title.toUpperCase()}</h1>
       </Link>
 
-      <span className="subtitle">shop now</span>
+      <span className="shop">shop now</span>
     </div>
   </div>
 );

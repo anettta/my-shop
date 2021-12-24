@@ -1,11 +1,11 @@
 import React from "react";
-import MenuItem from "../menu-item/menu-item.js";
-import "../directory/directory.styles.scss";
-import puzzlesImg from "../directory/puzzle.jpeg";
-import printsImg from "../directory/prints.jpg";
-import thermosImg from "../directory/thermos.jpeg";
-import minibookImg from "../directory/minibook.jpg";
-import photocardsImg from "../directory/cards.jpg";
+import MenuItem from "./menu-item.js";
+import "../styles/directory.styles.scss";
+import puzzlesImg from "../images/puzzle.jpeg";
+import printsImg from "../images/prints.jpg";
+import thermosImg from "../images/thermos.jpeg";
+import minibookImg from "../images/minibook.jpg";
+import photocardsImg from "../images/cards.jpg";
 
 class Directory extends React.Component {
   constructor() {
@@ -45,7 +45,7 @@ class Directory extends React.Component {
           title: "photo cards",
           imageUrl: photocardsImg,
           size: "large",
-          id: 4,
+          id: 5,
           linkUrl: "cards",
         },
       ],
