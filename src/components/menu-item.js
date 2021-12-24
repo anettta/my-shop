@@ -9,7 +9,7 @@ const MenuItem = (props) => (
       style={{ backgroundImage: `url(${props.imageUrl})` }}
     />
     <div className="content">
-      <Link style={{ textDecoration: "none" }} to={props.title}>
+      <Link to={props.title}>
         <h1 className="title">{props.title.toUpperCase()}</h1>
       </Link>
 
