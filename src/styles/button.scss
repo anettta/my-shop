@@ -19,4 +19,15 @@
     color: black;
     border: 1px solid black;
   }
+  &.google-sign-in {
+    background: linear-gradient((-120deg, #1667eb, #0c7428, #ac8203, #e9210e));
+    color: white;
+
+    &:hover {
+      background: linear-gradient(
+        (-120deg, #4285f4, #34ab53, #fbbc05, #ea4335)
+      );
+      border: none;
+    }
+  }
 }

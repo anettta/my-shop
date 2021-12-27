@@ -19,6 +19,7 @@
     "@mui/material": "^5.2.4",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.5.1",
+    "firebase": "^9.6.1",
     "html-loader": "^3.0.1",
     "react": "16.8.6",
     "react-dom": "16.8.6",

@@ -2,7 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../styles/header.styles.scss";
 import { FaCamera } from "react-icons/fa";
-const Header = () => (
+import { auth } from "../../firebase/firebase.utils";
+
+const Header = (props) => (
   <div className="header">
     <Link className="logo-container" to="/">
       <FaCamera className="logo"></FaCamera>
@@ -14,9 +16,15 @@ const Header = () => (
       <Link className="option" to="/contact">
         CONTACT
       </Link>
-      <Link className="option" to="/sign%20in">
-        SIGN IN
-      </Link>
+      {props.currentUser ? (
+        <div className="option" onClick={() => auth.signOut()}>
+          SIGN OUT
+        </div>
+      ) : (
+        <Link className="option" to="/sign%20in">
+          SIGN IN
+        </Link>
+      )}
     </div>
   </div>
 );
