@@ -16,6 +16,7 @@
     "@babel/core": "^7.16.5",
     "@babel/preset-env": "^7.16.5",
     "@babel/preset-react": "^7.16.5",
+    "@babel/runtime": "^7.16.5",
     "@mui/material": "^5.2.4",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.5.1",
@@ -31,6 +32,7 @@
     "webpack-dev-server": "^4.6.0"
   },
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.16.5",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "node-sass": "^7.0.0",
