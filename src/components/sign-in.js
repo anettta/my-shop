@@ -1,5 +1,5 @@
 import React from "react";
-
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import "../styles/sign-in.scss";
 import FormInput from "../components/form-input.js";
 import Button from "../components/button.js";
@@ -16,9 +16,19 @@ class SignIn extends React.Component {
     };
   }
 
-  handleSubmit = (event) => {
+  handleSubmit = async (event) => {
     event.preventDefault();
-    this.setState({ email: "", password: "" });
+
+    const { email, password } = this.state;
+
+    try {
+      const auth = getAuth();
+      await signInWithEmailAndPassword(auth, email, password);
+
+      this.setState({ email: "", password: "" });
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   handleChange = (event) => {
@@ -53,7 +63,7 @@ class SignIn extends React.Component {
           <div className="buttons">
             <Button type="submit">Sign In</Button>
 
-            <Button onClick={signInWithGoogle} isGoogleSignIn>
+            <Button type="button" onClick={signInWithGoogle} isGoogleSignIn>
               Sign In With Google
             </Button>
           </div>
