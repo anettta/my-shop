@@ -17,20 +17,20 @@ class Directory extends React.Component {
           title: "puzzles",
           imageUrl: puzzlesImg,
           id: 1,
-
+          size: "large",
           linkUrl: "",
         },
         {
           title: "photo prints",
           imageUrl: printsImg,
-
+          size: "large",
           id: 2,
           linkUrl: "",
         },
         {
           title: "thermos",
           imageUrl: thermosImg,
-
+          size: "large",
           id: 3,
           linkUrl: "",
         },

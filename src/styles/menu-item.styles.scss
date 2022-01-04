@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
+  border: 0.1px dotted rgb(206, 202, 202);
   margin: 0 7.5px 15px;
   overflow: hidden;
 
@@ -46,7 +46,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
+    border: 0.1px dotted rgb(206, 202, 202);
     background-color: white;
     opacity: 0.7;
     position: absolute;
