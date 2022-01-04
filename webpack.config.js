@@ -1,3 +1,4 @@
+const { startAfter } = require("firebase/firestore");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
@@ -27,6 +28,12 @@ module.exports = {
             loader: "file-loader",
           },
         ],
+      },
+      {
+        test: /\.svg$/,
+        use: {
+          loader: "svg-react-loader",
+        },
       },
     ],
   },

@@ -4,6 +4,10 @@ import "../styles/header.styles.scss";
 import { FaCamera } from "react-icons/fa";
 import { auth } from "../../firebase/firebase.utils";
 import { connect } from "react-redux";
+import { FaShoppingBag } from "react-icons/fa";
+import "../styles/cart-icon.scss";
+import CartDropdown from "./cart-dropdown.js";
+import { toggleCartHidden } from "../redux/cart-actions.js";
 
 const Header = (props) => (
   <div className="header">
@@ -26,12 +30,22 @@ const Header = (props) => (
           SIGN IN
         </Link>
       )}
+      <div className="cart-icon" onClick={props.toggleCartHidden}>
+        <FaShoppingBag className="shopping-icon" />
+        <span className="item-count">0</span>
+      </div>
     </div>
+    {props.hidden ? null : <CartDropdown />}
   </div>
 );
 
-const mapStateToProps = (state) => ({
-  currentUser: state.user.currentUser,
+const mapDispatchToProps = (dispatch) => ({
+  toggleCartHidden: () => dispatch(toggleCartHidden()),
 });
 
-export default connect(mapStateToProps)(Header);
+const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
+  currentUser,
+  hidden,
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

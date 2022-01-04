@@ -6,17 +6,23 @@
   margin-bottom: 25px;
 
   .logo-container {
-    height: 100%;
-    width: 70px;
-    padding: 25px;
+    width: 45px;
+    height: 45px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+    background: linear-gradient((-120deg, #d5d9dd, #dae2db, #dad7d0, #ccc7c7));
   }
 
   .logo {
-    width: 40px;
-    height: 40px;
+    width: 28px; //24px
+    height: 28px; //24px
     color: white;
-    background: linear-gradient(to bottom left, #616161 15%, #e6e7e8);
   }
+
   .options {
     width: 50%;
     height: 100%;
