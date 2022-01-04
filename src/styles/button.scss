@@ -6,7 +6,7 @@
   line-height: 50px;
   padding: 0 35px 0 35px;
   font-size: 15px;
-  background-color: black;
+  background: linear-gradient((-120deg, #16181a, #525753, #5e5c58, #0f0c0c));
   color: white;
   text-transform: uppercase;
   font-family: "Open Sans Condensed";
@@ -15,9 +15,10 @@
   cursor: pointer;
 
   &:hover {
-    background-color: white;
-    color: black;
-    border: 1px solid black;
+    // background-color: white;
+    // color: black;
+    background: linear-gradient((-120deg, #282c31, #99a19b, #8d8b85, #0f0b0b));
+    // border: 1px solid black;
   }
   &.google-sign-in {
     background: linear-gradient((-120deg, #1667eb, #0c7428, #ac8203, #e9210e));
