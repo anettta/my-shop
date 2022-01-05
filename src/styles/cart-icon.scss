@@ -6,11 +6,10 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: white;
-  background: linear-gradient((-120deg, #b9bcc0, #bcc4bd, #b4b2ac, #a8a4a4));
+  color: #302f2f;
 
   &:hover {
-    background: linear-gradient((-120deg, #888a8d, #8c928d, #8a8883, #746f6f));
+    color: #141414;
   }
   .shopping-icon {
     width: 30px; //24px
@@ -22,6 +21,6 @@
     font-size: 10px;
     font-weight: bold;
     bottom: 12px;
-    color: #8c928d;
+    color: #f8faf8;
   }
 }

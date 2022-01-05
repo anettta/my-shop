@@ -14,13 +14,15 @@
     justify-content: center;
     cursor: pointer;
     color: white;
-    background: linear-gradient((-120deg, #d5d9dd, #dae2db, #dad7d0, #ccc7c7));
   }
 
   .logo {
     width: 28px; //24px
     height: 28px; //24px
-    color: white;
+    color: #81ac9e;
+    &:hover {
+      color: #6b8f83;
+    }
   }
 
   .options {

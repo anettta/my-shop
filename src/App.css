@@ -1,12 +1,12 @@
 body {
   font-family: "Open Sans Condensed", sans-serif;
   padding: 20px 60px;
-  background: linear-gradient((-120deg, #eceff3, #f2f7f3, #f3f2ee, #eee9e9));
+  background-color: #e4efe7;
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: rgb(75, 73, 73);
 }
 
 * {
