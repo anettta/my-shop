@@ -9,7 +9,7 @@ import "../styles/cart-icon.scss";
 import CartDropdown from "./cart-dropdown.js";
 import { toggleCartHidden } from "../redux/cart-actions.js";
 
-const Header = (props) => (
+const Header = ({ currentUser, hidden, toggleCartHidden }) => (
   <div className="header">
     <Link className="logo-container" to="/">
       <FaCamera className="logo"></FaCamera>
@@ -21,7 +21,7 @@ const Header = (props) => (
       <Link className="option" to="/contact">
         CONTACT
       </Link>
-      {props.currentUser ? (
+      {currentUser ? (
         <div className="option" onClick={() => auth.signOut()}>
           SIGN OUT
         </div>
@@ -30,12 +30,12 @@ const Header = (props) => (
           SIGN IN
         </Link>
       )}
-      <div className="cart-icon" onClick={props.toggleCartHidden}>
+      <div className="cart-icon" onClick={toggleCartHidden}>
         <FaShoppingBag className="shopping-icon" />
         <span className="item-count">0</span>
       </div>
     </div>
-    {props.hidden ? null : <CartDropdown />}
+    {hidden ? null : <CartDropdown />}
   </div>
 );
 
