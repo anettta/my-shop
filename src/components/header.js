@@ -9,7 +9,7 @@ import "../styles/cart-icon.scss";
 import CartDropdown from "./cart-dropdown.js";
 import { toggleCartHidden } from "../redux/cart-actions.js";
 
-const Header = ({ currentUser, hidden, toggleCartHidden }) => (
+const Header = ({ currentUser, hidden, toggleCartHidden, itemCount }) => (
   <div className="header">
     <Link className="logo-container" to="/">
       <FaCamera className="logo"></FaCamera>
@@ -32,7 +32,7 @@ const Header = ({ currentUser, hidden, toggleCartHidden }) => (
       )}
       <div className="cart-icon" onClick={toggleCartHidden}>
         <FaShoppingBag className="shopping-icon" />
-        <span className="item-count">0</span>
+        <span className="item-count">{itemCount}</span>
       </div>
     </div>
     {hidden ? null : <CartDropdown />}
@@ -43,9 +43,16 @@ const mapDispatchToProps = (dispatch) => ({
   toggleCartHidden: () => dispatch(toggleCartHidden()),
 });
 
-const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
+const mapStateToProps = ({
+  user: { currentUser },
+  cart: { cartItems, hidden },
+}) => ({
   currentUser,
   hidden,
+  itemCount: cartItems.reduce(
+    (accumulatedQuanity, cartItem) => accumulatedQuanity + cartItem.quantity,
+    0
+  ),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
