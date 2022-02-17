@@ -1,5 +1,6 @@
 import CartActionTypes from "./cart-types.js";
-import { addItemToCart } from "../redux/cart-utils.js";
+import { addItemToCart } from "./cart-utils.js";
+
 const INITIAL_STATE = {
   hidden: true,
   cartItems: [],

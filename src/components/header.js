@@ -4,12 +4,12 @@ import "../styles/header.styles.scss";
 import { FaCamera } from "react-icons/fa";
 import { auth } from "../../firebase/firebase.utils";
 import { connect } from "react-redux";
-import { FaShoppingBag } from "react-icons/fa";
-import "../styles/cart-icon.scss";
+import CartIcon from "../components/cart-icon.js";
+
 import CartDropdown from "./cart-dropdown.js";
 import { toggleCartHidden } from "../redux/cart-actions.js";
 
-const Header = ({ currentUser, hidden, toggleCartHidden, itemCount }) => (
+const Header = ({ currentUser, hidden }) => (
   <div className="header">
     <Link className="logo-container" to="/">
       <FaCamera className="logo"></FaCamera>
@@ -30,29 +30,15 @@ const Header = ({ currentUser, hidden, toggleCartHidden, itemCount }) => (
           SIGN IN
         </Link>
       )}
-      <div className="cart-icon" onClick={toggleCartHidden}>
-        <FaShoppingBag className="shopping-icon" />
-        <span className="item-count">{itemCount}</span>
-      </div>
+      <CartIcon />
     </div>
     {hidden ? null : <CartDropdown />}
   </div>
 );
 
-const mapDispatchToProps = (dispatch) => ({
-  toggleCartHidden: () => dispatch(toggleCartHidden()),
-});
-
-const mapStateToProps = ({
-  user: { currentUser },
-  cart: { cartItems, hidden },
-}) => ({
+const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
   currentUser,
   hidden,
-  itemCount: cartItems.reduce(
-    (accumulatedQuanity, cartItem) => accumulatedQuanity + cartItem.quantity,
-    0
-  ),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default connect(mapStateToProps)(Header);
