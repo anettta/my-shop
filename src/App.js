@@ -10,8 +10,10 @@ import SignInAndSignUp from "./pages/sign-in-and-sign-up/sign-in-and-sign-up";
 import { auth, createUserProfileDocument } from "../firebase/firebase.utils.js";
 import { onSnapshot } from "firebase/firestore";
 import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
 import { setCurrentUser } from "./redux/user-actions.js";
-
+import { selectCurrentUser } from "./redux/user-selectors.js";
+import CheckoutPage from "./pages/checkout/checkout.js";
 class App extends React.Component {
   // constructor() {
   //   super();
@@ -53,8 +55,9 @@ class App extends React.Component {
       <div>
         <Header />
         <Routes>
-          <Route path="/" element={<HomePage />}></Route>
+          <Route exact path="/" element={<HomePage />}></Route>
           <Route path="/shop" element={<ShopPage />}></Route>
+          <Route exact path="/checkout" element={<CheckoutPage />}></Route>
           <Route
             path="/sign%20in"
             element={
@@ -71,8 +74,8 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  currentUser: state.user.currentUser,
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser,
 });
 
 const mapDispatchToProps = (dispatch) => ({

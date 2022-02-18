@@ -1,10 +1,10 @@
 import React from "react";
 import MenuItem from "./menu-item.js";
 import "../styles/directory.styles.scss";
-import puzzlesImg from "../images/puzzle.jpeg";
+// import puzzlesImg from "../images/puzzle.jpeg";
 import printsImg from "../images/prints.jpg";
-import thermosImg from "../images/thermos.jpeg";
-import minibookImg from "../images/minibook.jpg";
+// import thermosImg from "../images/thermos.jpeg";
+// import minibookImg from "../images/minibook.jpg";
 import photocardsImg from "../images/cards.jpg";
 
 class Directory extends React.Component {
@@ -14,40 +14,40 @@ class Directory extends React.Component {
     this.state = {
       sections: [
         {
-          title: "puzzles",
-          imageUrl: puzzlesImg,
-          id: 1,
-          size: "large",
-          linkUrl: "",
-        },
-        {
           title: "photo prints",
           imageUrl: printsImg,
+          id: 1,
           size: "large",
-          id: 2,
-          linkUrl: "",
-        },
-        {
-          title: "thermos",
-          imageUrl: thermosImg,
-          size: "large",
-          id: 3,
-          linkUrl: "",
-        },
-        {
-          title: "mini book",
-          imageUrl: minibookImg,
-          size: "large",
-          id: 4,
           linkUrl: "",
         },
         {
           title: "photo cards",
           imageUrl: photocardsImg,
           size: "large",
-          id: 5,
-          linkUrl: "cards",
+          id: 2,
+          linkUrl: "",
         },
+        // {
+        //   title: "thermos",
+        //   imageUrl: thermosImg,
+        //   size: "large",
+        //   id: 3,
+        //   linkUrl: "",
+        // },
+        // {
+        //   title: "mini book",
+        //   imageUrl: minibookImg,
+        //   size: "large",
+        //   id: 4,
+        //   linkUrl: "",
+        // },
+        // {
+        //   title: "photo cards",
+        //   imageUrl: photocardsImg,
+        //   size: "large",
+        //   id: 5,
+        //   linkUrl: "cards",
+        // },
       ],
     };
   }

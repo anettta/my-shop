@@ -4,10 +4,11 @@ import "../styles/header.styles.scss";
 import { FaCamera } from "react-icons/fa";
 import { auth } from "../../firebase/firebase.utils";
 import { connect } from "react-redux";
+import { createStructuredSelector } from "reselect";
 import CartIcon from "../components/cart-icon.js";
-
 import CartDropdown from "./cart-dropdown.js";
-import { toggleCartHidden } from "../redux/cart-actions.js";
+import { selectCartHidden } from "../redux/cart-selectors.js";
+import { selectCurrentUser } from "../redux/user-selectors.js";
 
 const Header = ({ currentUser, hidden }) => (
   <div className="header">
@@ -36,9 +37,9 @@ const Header = ({ currentUser, hidden }) => (
   </div>
 );
 
-const mapStateToProps = ({ user: { currentUser }, cart: { hidden } }) => ({
-  currentUser,
-  hidden,
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser,
+  hidden: selectCartHidden,
 });
 
 export default connect(mapStateToProps)(Header);
