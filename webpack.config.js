@@ -19,7 +19,16 @@ module.exports = {
       },
       {
         test: /\.(s*)css$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: [
+          "style-loader",
+          "css-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              implementation: require.resolve("sass"),
+            },
+          },
+        ],
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
@@ -37,7 +46,7 @@ module.exports = {
       },
     ],
   },
-
+  externals: ["fs"],
   plugins: [
     new HtmlWebpackPlugin({
       template: "./index.html",

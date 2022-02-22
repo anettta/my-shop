@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../styles/header.styles.scss";
+import "../styles/header-styles.scss";
 import { FaCamera } from "react-icons/fa";
 import { auth } from "../../firebase/firebase.utils";
 import { connect } from "react-redux";
@@ -27,7 +27,7 @@ const Header = ({ currentUser, hidden }) => (
           SIGN OUT
         </div>
       ) : (
-        <Link className="option" to="/sign%20in">
+        <Link className="option" to="/signin">
           SIGN IN
         </Link>
       )}
