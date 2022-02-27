@@ -1,4 +1,4 @@
-const { startAfter } = require("firebase/firestore");
+// const { startAfter } = require("firebase/firestore");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
