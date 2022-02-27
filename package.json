@@ -9,7 +9,7 @@
   "scripts": {
     "test": "react-scripts test",
     "build": "react-scripts build",
-    "start": "react-scripts start",
+    "start": "serve -s build",
     "eject": "react-scripts eject",
     "clean": "rmdir /s /q node_modules"
   },
