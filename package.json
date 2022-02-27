@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "proxy": "https//localhost:5000",
   "description": "",
+  "engines": {
+    "node": "v14.16.0"
+  },
   "scripts": {
     "test": "react-scripts test",
     "build": "react-scripts build",
