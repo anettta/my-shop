@@ -53,11 +53,11 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "node-sass": "^7.0.1",
+    "nodemon": "^2.0.15",
     "sass": "^1.45.0",
     "sass-loader": "^12.4.0",
     "svg-react-loader": "^0.4.6",
-    "webpack": "^5.65.0",
-    "nodemon": "2.0.7"
+    "webpack": "^5.65.0"
   },
   "browser": {
     "fs": false,
