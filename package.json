@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "react-scripts test",
-    "build": "npm run build",
+    "build": "react-scripts build",
     "start": "node index.js",
     "eject": "react-scripts eject",
     "clean": "rmdir /s /q node_modules"
