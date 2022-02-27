@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "engines": {
-    "node": "v14.16.0"
+    "node": "v14.16.0",
+    "npm": "6.14.11"
   },
   "scripts": {
     "test": "react-scripts test",
-    "build": "react-scripts build",
+    "build": "npm run build",
     "start": "serve -s build",
     "eject": "react-scripts eject",
     "clean": "rmdir /s /q node_modules"
@@ -55,7 +56,8 @@
     "sass": "^1.45.0",
     "sass-loader": "^12.4.0",
     "svg-react-loader": "^0.4.6",
-    "webpack": "^5.65.0"
+    "webpack": "^5.65.0",
+    "nodemon": "2.0.7"
   },
   "browser": {
     "fs": false,
